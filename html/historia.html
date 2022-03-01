@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,7 +23,24 @@
         <h1>JOHAN CRUYFF F.C.</h1>
         <input class="buscador" type="search" placeholder="BUSCAR">
     </header>
-    <nav>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">J.C.F.C.</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" href="../index.html">HOME</a>
+                    <a class="nav-link" href="historia.html">HISTORIA</a>
+                    <a class="nav-link" href="galeria.html">GALERIA</a>
+                    <a class="nav-link" href="espaciofans.html">ESPACIO FANS</a>
+                    <a class="nav-link" href="contacto.html">CONTACTO</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!--<nav>
         <ul id="nav" class="nav-foot">
             <li><a href="../index.html">HOME</a></li>
             <li><a href="historia.html">HISTORIA</a></li>
@@ -29,13 +48,88 @@
             <li><a href="espaciofans.html">ESPACIO FANS</a></li>
             <li><a href="contacto.html">CONTACTO</a></li>
         </ul>
-    </nav>
-    <main class="grillatrayectoria">
+    </nav>-->
+    <main class="container">
         <div class="trayectoria">
             <h2 data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">“EL FÚTBOL ES UN JUEGO QUE SE JUEGA CON EL CEREBRO. DEBES ESTAR EN EL LUGAR ADECUADO, EN EL MOMENTO ADECUADO. NI DEMASIADO PRONTO NI DEMASIADO TARDE”</h2>
-            <img data-aos="flip-up" data-aos-duration="3000" src="../img/jc14trajectory.png" alt="">           
+            <img data-aos="flip-up" data-aos-duration="2000" src="../img/jc14trajectory.png" alt="">           
         </div>
-        <div data-aos="fade-right" data-aos-duration="3000" class="parrafo">
+        <div class="accordion" id="accordionPanelsStayOpenExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                        BIOGRAFIA
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+                    <div class="accordion-body">
+                        <p>(Amsterdam, 1947 - Barcelona, 2016) Jugador y entrenador de fútbol holandés. Hijo de una familia de modesta situación económica, a los diez años ingresó en el Ajax de Amsterdam, club en el cual permanecería hasta 1973 y con el que obtendría seis títulos de Liga y tres copas de Europa. Entre 1973 y 1978 jugó en el F. C. Barcelona, con el cual consiguió el Campeonato de Liga de 1974. Durante dichos años fue nombrado mejor futbolista europeo en tres ocasiones (1971, 1973 y 1974) y en 1974 fue designado mejor jugador del Mundial disputado aquel año. Tras su paso por el F. C. Barcelona recaló brevemente en la liga estadounidense y luego en el Levante español, para incorporarse de nuevo al Ajax como jugador, poco antes de retirarse de la práctica deportiva. Su posterior faceta de entrenador, que inició en el Ajax, estaría tan plagada de éxitos como la de jugador. Destacó sobre todo por su talante ofensivo y logró sus mayores victorias con el F. C. Barcelona, club al que entrenó entre 1988 y 1996. Durante dichos años logró cuatro ligas consecutivas (1991, 1992, 1993 y 1994) y una copa de Europa (1992). En 1998 creó la Universidad Johan Cruyff, que imparte estudios para la administración y gestión de entidades deportivas. En 1999 fue homenajeado en Barcelona y Amsterdam y fue nombrado asesor de la UEFA.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                        COMIENZOS EN EL AJAX
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+                    <div class="accordion-body">
+                        <P>Johan Cruyff debutó en el fútbol de primera división con el Ajax el 15 de noviembre de 1964, a los 17 años. Por entonces era un joven delgado y larguirucho, de mucha elegancia y técnica individual, tan listo en el terreno de juego como fuera de él. Sus cambios de ritmo con el balón pegado a la bota lo hacían inalcanzable para sus marcadores. Dos años después, el Ajax ganó la Liga holandesa, circunstancia que se repetiría en siete ocasiones más. Recibió el Balón de Oro al mejor jugador europeo en los años 1971, 1973 y 1974.</P>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                        PASO AL BARCELONA
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+                    <div class="accordion-body">
+                        <P>La brillantez de su juego y el extraordinario palmarés que ostentaba pese a su juventud despertó el interés de muchos clubes; fue finalmente el F. C. Barcelona el que lo fichó en 1973 por cien millones de pesetas, una cantidad desorbitada en la época. Cruyff llegaba avalado por su trayectoria en el Ajax, con el que había ganado tres Copas de Europa consecutivas con un juego que sorprendía al mundo futbolístico. El 28 de octubre de 1973 debutó con el F. C. Barcelona en la Liga española de fútbol, en un partido contra el Granada. El Barcelona, que había empezado la competición con un juego mediocre, inició ese día una remontada que le llevaría al título; en su camino hacia la Liga destaca una histórica victoria sobre el Real Madrid por 0-5 en el Bernabéu. En las cinco temporadas que jugó con el Barça obtuvo también una Copa de España, y se convirtió en el ídolo de la afición culé.</P>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
+                        LIDER DE LA NARANJA MECANICA
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFour">
+                    <div class="accordion-body">
+                        <P>
+                            Su aportación a la selección de su país fue decisiva y marcó una época. En 1974, con Cruyff como líder, la selección holandesa (apodada la naranja mecánica por su contundencia y el color de la camiseta) se convirtió en subcampeona del mundo con un juego asombroso. La base de la selección holandesa eran los jugadores y el sistema del Ajax, el famoso fútbol total que el técnico rumano Stefan Kovacs había impuesto al principio de los setenta en el club de Amsterdam. Con una mejor preparación física, presión en todo el campo, intercambio constante de posiciones y un fútbol rápido y ofensivo, la selección naranja arrolló a sus competidores en el Mundial de Alemania.
+                            El sistema fue posible gracias a un plantel de grandes jugadores dirigidos por Rinus Michels, entrenador del Barcelona esa misma temporada. Cruyff era el líder de un extraordinario conjunto de talentos como Van Hanegen, Krol, Rijsbergen, Rep y el incombustible Neeskens, fichado también por el Barça nada más acabar el Mundial. El fútbol neerlandés deslumbró a todo el mundo; sólo tenía un defecto: la falta de resolución final ante la portería, que fue, junto con el tradicional espíritu competitivo de los alemanes, lo que impidió derrotar en la final a los anfitriones.
+                        </P>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingFive">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false" aria-controls="panelsStayOpen-collapseFive">
+                        ETAPA COMO DT
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFive">
+                    <div class="accordion-body">
+                        <P>
+                            La segunda etapa de Cruyff en el Barcelona la desarrolló como técnico. Fichado por el presidente José Luis Núñez el 4 de mayo de 1988, promovió como entrenador un juego vistoso, basado en la posesión del balón y en el espíritu ofensivo; por la calidad individual y colectiva de sus componentes, así como por su espíritu innovador y sus éxitos deportivos, su equipo sería conocido como el Dream Team y proporcionaría al club una de las etapas más brillantes de la historia. El Barcelona conquistó una Recopa de Europa (1989), una Copa del Rey (1990) y cuatro Ligas consecutivas (1990-1994). En 1992 llegó el título más soñado por los barcelonistas, la Copa de Europa. Igual que en sus tiempos de jugador, Cruyff no dejó en su etapa como técnico que nadie se metiese en su terreno; manejaba incluso la política de fichajes y salarios.
+                            Pese a sus extraordinarios triunfos, la mala gestión del equipo en 1996 movió a la directiva a cesarlo de su cargo. Inmediatamente, Cruyff recurrió la decisión ante los tribunales por considerarla despido improcedente. El enfrentamiento de Cruyff con la directiva azulgrana no se reflejó en la afición, que manifestó siempre su apoyo al ex jugador y ex técnico que tantos títulos había dado a su equipo. De hecho, Cruyff siguió viviendo en Barcelona, consciente de que seguía siendo un mito para los simpatizantes azulgranas. Los partidos de homenaje en el estadio barcelonista en marzo de 1999 registraron una gran asistencia de público. En 2009 recibió el encargo de dirigir la selección de fútbol de la Comunidad Autónoma de Cataluña, y en 2010 fue nombrado Presidente de Honor del Fútbol Club Barcelona.
+                            Aunque como jugador figura entre los grandes del siglo XX, al lado de nombres ilustres como los de Pelé, Beckenbauer o Maradona, es al tomar en consideración conjuntamente su trayectoria de futbolista y entrenador cuando Johan Cruyff se revela como uno de los personajes más influyentes de la historia del fútbol; entre el fútbol total de la selección holandesa y el estilo del Dream Team se advierte una solución de continuidad que se prolonga hasta el siglo XXI con el Barça de Pep Guardiola (gran centrocampista del Dream Team y técnico blaugrana en el glorioso cuatrienio 2008-2012), cuyos éxitos se consideran la herencia de su filosofía y de sus concepciones estratégicas y tácticas del juego.
+                        </P>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!--<main class="grillatrayectoria">
+        <div class="trayectoria">
+            <h2 data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">“EL FÚTBOL ES UN JUEGO QUE SE JUEGA CON EL CEREBRO. DEBES ESTAR EN EL LUGAR ADECUADO, EN EL MOMENTO ADECUADO. NI DEMASIADO PRONTO NI DEMASIADO TARDE”</h2>
+            <img data-aos="flip-up" data-aos-duration="2000" src="../img/jc14trajectory.png" alt="">           
+        </div>
+        <div data-aos="fade-right" data-aos-duration="2000" class="parrafo">
             <h3>BIOGRAFIA</h3>
             <p>(Amsterdam, 1947 - Barcelona, 2016) Jugador y entrenador de fútbol holandés. Hijo de una familia de modesta situación económica, a los diez años ingresó en el Ajax de Amsterdam, club en el cual permanecería hasta 1973 y con el que obtendría seis títulos de Liga y tres copas de Europa. Entre 1973 y 1978 jugó en el F. C. Barcelona, con el cual consiguió el Campeonato de Liga de 1974. Durante dichos años fue nombrado mejor futbolista europeo en tres ocasiones (1971, 1973 y 1974) y en 1974 fue designado mejor jugador del Mundial disputado aquel año. Tras su paso por el F. C. Barcelona recaló brevemente en la liga estadounidense y luego en el Levante español, para incorporarse de nuevo al Ajax como jugador, poco antes de retirarse de la práctica deportiva. Su posterior faceta de entrenador, que inició en el Ajax, estaría tan plagada de éxitos como la de jugador. Destacó sobre todo por su talante ofensivo y logró sus mayores victorias con el F. C. Barcelona, club al que entrenó entre 1988 y 1996. Durante dichos años logró cuatro ligas consecutivas (1991, 1992, 1993 y 1994) y una copa de Europa (1992). En 1998 creó la Universidad Johan Cruyff, que imparte estudios para la administración y gestión de entidades deportivas. En 1999 fue homenajeado en Barcelona y Amsterdam y fue nombrado asesor de la UEFA.</p>
             <h3>COMIENZOS EN EL AJAX</h3>
@@ -55,38 +149,43 @@
             </P>
         </div>
         <div class="ajax">
-            <img data-aos="flip-left" data-aos-duration="3000" src="../img/ajaxjc.jpg" alt="">
+            <img data-aos="flip-left" data-aos-duration="2000" src="../img/ajaxjc.jpg" alt="">
         </div>
         <div class="barca">
-            <img data-aos="flip-left" data-aos-duration="3000" src="../img/barcajc(3).jpg" alt="">
+            <img data-aos="flip-left" data-aos-duration="2000" src="../img/barcajc(3).jpg" alt="">
         </div>
         <div class="seleccion">
-            <img data-aos="flip-left" data-aos-duration="3000" src="../img/jcnm.jpg" alt="">
+            <img data-aos="flip-left" data-aos-duration="2000" src="../img/jcnm.jpg" alt="">
         </div>
-        <div data-aos="flip-left" data-aos-duration="3000" class="dt">
+        <div data-aos="flip-left" data-aos-duration="2000" class="dt">
             <img src="../img/jcdt (3).jpg" alt="">
         </div>
         <div class="homenaje">
-            <img data-aos="flip-down" data-aos-duration="3000" src="../img/graciesjohan.jpg" alt="">
+            <img data-aos="flip-down" data-aos-duration="2000" src="../img/graciesjohan.jpg" alt="">
         </div>  
-    </main>
+    </main>-->
     <footer class="nav-foot">
-        <div>
-            <img src="../img/facebook.png" alt="">
+        <i class="bi bi-facebook"></i>
+        <i class="bi bi-twitter"></i>
+        <i class="bi bi-instagram"></i>
+        <i class="bi bi-messenger"></i>
+        <i class="bi bi-telegram"></i>
+        <!--<div>
+            <img src="./img/facebook.png" alt="">
         </div>
         <div>
-            <img src="../img/twitter.png" alt="">
+            <img src="img/twitter.png" alt="">
         </div>
         <div>
-            <img src="../img/instagram.png" alt="">
+            <img src="img/instagram.png" alt="">
         </div>
         <div>
-            <img src="../img/messenger.png" alt="">
+            <img src="img/messenger.png" alt="">
         </div>
         <div>
-            <img src="../img/telegram.png" alt="">
-        </div>
-    </footer>
+            <img src="img/telegram.png" alt="">
+        </div>-->
+    </footer> 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();

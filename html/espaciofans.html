@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,7 +23,24 @@
         <h1>JOHAN CRUYFF F.C.</h1>
         <input class="buscador" type="search" placeholder="BUSCAR">
     </header>
-    <nav>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">J.C.F.C.</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" href="../index.html">HOME</a>
+                    <a class="nav-link" href="historia.html">HISTORIA</a>
+                    <a class="nav-link" href="galeria.html">GALERIA</a>
+                    <a class="nav-link" href="espaciofans.html">ESPACIO FANS</a>
+                    <a class="nav-link" href="contacto.html">CONTACTO</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!--<nav>
         <ul id="nav" class="nav-foot">
             <li><a href="../index.html">HOME</a></li>
             <li><a href="historia.html">HISTORIA</a></li>
@@ -29,11 +48,32 @@
             <li><a href="espaciofans.html">ESPACIO FANS</a></li>
             <li><a href="contacto.html">CONTACTO</a></li>
         </ul>
-    </nav>
+    </nav>-->
     <main class="grillafans">
         <h2>DESCARGA GRATUITAMENTE LOS WALLPAPERS Y VISITA LAS DIFERENTES ORGANIZACIONES</h2>
         <section class="downloads1">
-            <div class="wallpaper">
+            <div class="card" style="width: 14rem;">
+                <img src="../img/wallpaperjc14orange.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">All Orange</h5>
+                    <a href="#" class="btn btn-outline-warning">DOWNLOAD</a>
+                </div>
+            </div>
+            <div class="card" style="width: 14rem;">
+                <img src="../img/wallpaperjc14ajax.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Ajax Retro</h5>
+                    <a href="#" class="btn btn-outline-warning">DOWNLOAD</a>
+                </div>
+            </div>
+            <div class="card" style="width: 14rem;">
+                <img src="../img/wallpaperjc14barcelona.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Barcelona</h5>
+                    <a href="#" class="btn btn-outline-warning">DOWNLOAD</a>
+                </div>
+            </div>
+            <!--<div class="wallpaper">
                 <img src="../img/wallpaperjc14orange.jpg" alt="">
                 <input class="descarga" type="button" value="DOWNLOAD">
             </div>
@@ -44,10 +84,31 @@
             <div class="wallpaper">
                 <img src="../img/wallpaperjc14barcelona.jpg" alt="">
                 <input class="descarga" type="button" value="DOWNLOAD">
-            </div>
+            </div>-->
         </section>
         <section class="downloads2">
-            <div class="wallpaper">
+            <div class="card" style="width: 14rem;">
+                <img src="../img/wallpaperjc14orangeclock.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Orange Clockwork</h5>
+                    <a href="#" class="btn btn-outline-warning">DOWNLOAD</a>
+                </div>
+            </div>
+            <div class="card" style="width: 14rem;">
+                <img src="../img/wallpaperjc14smoking.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Johan Smoking</h5>
+                    <a href="#" class="btn btn-outline-warning">DOWNLOAD</a>
+                </div>
+            </div>
+            <div class="card" style="width: 14rem;">
+                <img src="../img/wallpaperjc14nld.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">NDL Classic</h5>
+                    <a href="#" class="btn btn-outline-warning">DOWNLOAD</a>
+                </div>
+            </div>
+            <!--<div class="wallpaper">
                 <img src="../img/wallpaperjc14orangeclock.jpg" alt="">
                 <input class="descarga" type="button" value="DOWNLOAD">
             </div>
@@ -58,7 +119,7 @@
             <div class="wallpaper">
                 <img src="../img/wallpaperjc14nld.jpg" alt="">
                 <input class="descarga" type="button" value="DOWNLOAD">
-            </div>
+            </div>-->
         </section>
         <section class="links">
             <div class="enlaces">
@@ -73,22 +134,27 @@
         </section>
     </main>
     <footer class="nav-foot">
-        <div>
-            <img src="../img/facebook.png" alt="">
+        <i class="bi bi-facebook"></i>
+        <i class="bi bi-twitter"></i>
+        <i class="bi bi-instagram"></i>
+        <i class="bi bi-messenger"></i>
+        <i class="bi bi-telegram"></i>
+        <!--<div>
+            <img src="./img/facebook.png" alt="">
         </div>
         <div>
-            <img src="../img/twitter.png" alt="">
+            <img src="img/twitter.png" alt="">
         </div>
         <div>
-            <img src="../img/instagram.png" alt="">
+            <img src="img/instagram.png" alt="">
         </div>
         <div>
-            <img src="../img/messenger.png" alt="">
+            <img src="img/messenger.png" alt="">
         </div>
         <div>
-            <img src="../img/telegram.png" alt="">
-        </div>
-    </footer>
+            <img src="img/telegram.png" alt="">
+        </div>-->
+    </footer> 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
