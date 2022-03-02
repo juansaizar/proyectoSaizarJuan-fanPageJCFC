@@ -475,9 +475,15 @@ label{
         display: none;
     }
     .itemsportada{
-        font-size: smaller;
+        font-size: medium;
         height: 100%;
         width: 45%;
+    }
+    .itemsportada h2{
+        font-size: medium;
+    }
+    .itemsportada p{
+        font-size: small;
     }
     .notifrase{
         font-size: small;
