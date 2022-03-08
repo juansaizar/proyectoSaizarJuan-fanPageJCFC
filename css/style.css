@@ -4,7 +4,6 @@
     margin: 0;
     padding: 0;
 }
-
 body{
     background-color: black;
     font-family: 'Ubuntu', sans-serif;
@@ -61,7 +60,6 @@ li :hover{
 }
 nav{
     position: sticky;
-    /*top: 100px;*/
     z-index: 10;
 }
 footer{
@@ -92,7 +90,6 @@ footer div img:hover{
     transform: scale(1.1);
     transition: all 1s;
 }
-
 .pagina{
     height: 1100px;
     color: white;
@@ -153,7 +150,6 @@ section div img{
     background-color: black;
     color: orange;
 }
-
 .grillatrayectoria{
     display: grid;
     height: 3300px;
@@ -211,11 +207,6 @@ section div img{
     width: fit-content; 
     margin-left: 35%;   
 }
-
-.carousel-item img{
-    height: 510px;
-}
-
 .galeria{
     height: 1300px;
     display: grid;
@@ -263,7 +254,6 @@ section div img{
 .ph10{
     grid-area: ph10;
 }
-
 .grillafans{
     height: 900px;
     display: grid;
@@ -436,13 +426,6 @@ label{
     .sticky-top{
         top: 40px;
     }
-    /*nav{
-        top: 40px;
-        position: static;       
-    }
-    #nav{
-        flex-direction: column;
-    }*/
     li :hover{
         color: white;
     }
@@ -542,7 +525,6 @@ label{
     .carousel-item img{
         height: 330px;
     }
-   
     .grillafans{
         height: 650px;
         display: grid;
