@@ -104,13 +104,12 @@ footer {
       font-size: 33px; } }
 
 .pagina {
-  height: 1100px;
+  height: 1200px;
   color: #f0eee7;
   display: grid;
   grid-template-columns: repeat(3, 30%);
   grid-template-rows: 45% 45%;
-  grid-template-areas: "portada portada portada"
- "noticias noticias frase";
+  grid-template-areas: "portada portada portada" "noticias noticias frase";
   justify-content: space-evenly;
   align-content: space-around;
   align-items: center; }
@@ -159,17 +158,15 @@ footer {
       .pagina .notifrase div p {
         margin-bottom: 0; }
       .pagina .notifrase div img {
-        height: max-content; }
+        height: fit-content;
+        max-width: 100%; }
 
 /*responsive mobile 320px vertical 480px horizontal*/
 @media screen and (max-width: 480px) {
   .pagina {
     grid-template-columns: 100%;
     grid-template-rows: 15% 30% 30% 20%;
-    grid-template-areas: "portada"
- "portada"
- "noticias"
- "frase"; }
+    grid-template-areas: "portada" "portada" "noticias" "frase"; }
     .pagina .portada {
       grid-area: portada;
       flex-direction: column;
@@ -177,7 +174,7 @@ footer {
       .pagina .portada .itemsportada {
         width: 90%; }
         .pagina .portada .itemsportada h2 {
-          font-size: medium; }
+          font-size: x-large; }
         .pagina .portada .itemsportada p {
           font-size: medium; }
         .pagina .portada .itemsportada img {
@@ -209,12 +206,7 @@ body {
   height: 3300px;
   grid-template-columns: 40% 50%;
   grid-template-rows: repeat(6, 15%);
-  grid-template-areas: "trayectoria trayectoria"
- "parrafo ajax"
- "parrafo barca"
- "parrafo seleccion"
- "parrafo dt"
- "homenaje homenaje";
+  grid-template-areas: "trayectoria trayectoria" "parrafo ajax" "parrafo barca" "parrafo seleccion" "parrafo dt" "homenaje homenaje";
   justify-content: space-evenly;
   align-content: space-around;
   color: #f0eee7;
@@ -264,10 +256,7 @@ body {
   display: grid;
   grid-template-columns: repeat(6, 15%);
   grid-template-rows: repeat(4, 23%);
-  grid-template-areas: "ph1 ph1 ph2 ph2 ph2 ph3"
- "ph1 ph1 ph4 ph4 ph5 ph5"
- "ph6 ph6 ph4 ph4 ph8 ph8"
- "ph9 ph10 ph10 ph7 ph8 ph8";
+  grid-template-areas: "ph1 ph1 ph2 ph2 ph2 ph3" "ph1 ph1 ph4 ph4 ph5 ph5" "ph6 ph6 ph4 ph4 ph8 ph8" "ph9 ph10 ph10 ph7 ph8 ph8";
   justify-content: space-around;
   align-content: space-around; }
 
@@ -310,9 +299,7 @@ body {
   display: grid;
   grid-template-columns: repeat(6, 15%);
   grid-template-rows: 10% 50% 30%;
-  grid-template-areas: "tit tit tit tit tit tit"
- "wp1 wp1 wp1 wp2 wp2 wp2"
- "link link link link link link";
+  grid-template-areas: "tit tit tit tit tit tit" "wp1 wp1 wp1 wp2 wp2 wp2" "link link link link link link";
   justify-content: space-evenly;
   align-content: space-around; }
 
@@ -383,8 +370,7 @@ body {
   display: grid;
   grid-template-columns: 90%;
   grid-template-rows: 20% 70%;
-  grid-template-areas: "titulo"
- "formulario";
+  grid-template-areas: "titulo" "formulario";
   justify-content: space-evenly;
   align-content: space-around;
   align-content: space-evenly; }
@@ -439,13 +425,7 @@ label {
     height: 5350px;
     grid-template-columns: 90%;
     grid-template-rows: 6.5% 60% 6.5% 6.5% 6.5% 6.5% 6.5%;
-    grid-template-areas: "trayectoria"
- "parrafo"
- "ajax"
- "barca"
- "seleccion"
- "dt"
- "homenaje";
+    grid-template-areas: "trayectoria" "parrafo" "ajax" "barca" "seleccion" "dt" "homenaje";
     justify-content: space-evenly;
     align-content: space-around;
     color: #f0eee7;
@@ -460,16 +440,7 @@ label {
     display: grid;
     grid-template-columns: repeat(3, 30%);
     grid-template-rows: repeat(10, 9.5%);
-    grid-template-areas: "ph2 ph2 ph2"
- "ph4 ph4 ph3"
- "ph4 ph4 ph9"
- "ph7 ph5 ph5"
- "ph1 ph1 ph1"
- "ph1 ph1 ph1"
- "ph6 ph6 ph6"
- "ph8 ph8 ph8"
- "ph8 ph8 ph8"
- "ph10 ph10 ph10";
+    grid-template-areas: "ph2 ph2 ph2" "ph4 ph4 ph3" "ph4 ph4 ph9" "ph7 ph5 ph5" "ph1 ph1 ph1" "ph1 ph1 ph1" "ph6 ph6 ph6" "ph8 ph8 ph8" "ph8 ph8 ph8" "ph10 ph10 ph10";
     justify-content: space-around;
     align-content: space-around; }
   .galeria div img {
@@ -484,10 +455,7 @@ label {
     display: grid;
     grid-template-columns: repeat(3, 30%);
     grid-template-rows: 7% 33% 33% 13%;
-    grid-template-areas: "tit tit tit"
- "wp1 wp1 wp1"
- "wp2 wp2 wp2" 
- "link link link";
+    grid-template-areas: "tit tit tit" "wp1 wp1 wp1" "wp2 wp2 wp2"  "link link link";
     justify-content: space-evenly;
     align-content: space-around; }
   .grillafans h2 {
