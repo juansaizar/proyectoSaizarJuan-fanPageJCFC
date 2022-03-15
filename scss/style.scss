@@ -1,6 +1,9 @@
 @import 'variables.scss';
+@import 'header.scss';
+@import 'nav.scss';
+@import 'footer.scss';
+@import 'home.scss';
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
-
 
 *{
     margin: 0;
@@ -8,145 +11,9 @@
 }
 body{
     background-color: $dark;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: $fuente;;
 }
-h1{
-    color: $lightLetter;
-    font-size: 70px;
-}
-input{
-    height: 40px;
-    font-size: smaller;
-}
-.header{
-    width: 100%;
-    height: 100px;
-    background-color: $dark;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center; 
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
-header div{
-    height: 100%;    
-}
-div img{
-    height: 100%;
-}
-li :hover{
-    color: $lightLetter;
-}
-.nav-foot{
-    height: 50px;
-    width: 100%;
-    background-color: $ndl;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    justify-items: center;
-    align-items: center;
-    list-style-type: none;
-    z-index: 1;
-}
-.sticky-top{
-    top: 100px;
-    background-color: $ndl;
-}
-.navbar-nav a:hover{
-    transition: all 1s;
-    color: $lightLetter !important;
-}
-nav{
-    position: sticky;
-    z-index: 10;
-}
-footer{
-    position: sticky;
-    bottom: 0;
-}
-footer div{
-    height: 50px;
-    width: 50px;
-}
-a{
-    text-decoration: none;
-    font-size: 30px;
-    color: black;
-}
-footer div img{
-    max-width: 100%;
-    transition: all 1s;
-}
-footer div img:hover{
-    transform: scale(1.1);
-}
-.bi{
-    font-size: 40px;
-}
-.bi:hover{
-    color: $lightLetter;
-    transform: scale(1.1);
-    transition: all 1s;
-}
-.pagina{
-    height: 1100px;
-    color: $lightLetter;
-    display: grid;
-    grid-template-columns: repeat(3, 30%);
-    grid-template-rows: 45% 45%; 
-    grid-template-areas: 
-    "portada portada portada"
-    "noticias noticias frase";
-    justify-content: space-evenly;
-    align-content: space-around;
-    align-items: center;   
-}
-.portada{
-    grid-area: portada;
-    max-width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly; 
-    align-content: space-around;
-    align-items: center; 
-    text-align: center;
-    font-size: x-large;      
-    line-height: 2;
-}
-.noticias{
-    grid-area: noticias;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    text-align: center;
-}
-.frase{
-    grid-area: frase;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    text-align: center;    
-}
-.itemsportada{
-    align-content: center;
-    align-items: center;
-    height: 100%;
-    width: 90%;
-}
-section div img{
-    max-width: 100%;
-    max-height: 100%;
-}
-.notifrase{
-    width: 90%;
-    font-size: medium;
-}
+
 .accordion-button{
     background-color: $dark;
     color: $ndl;
@@ -369,7 +236,7 @@ label{
     display: flex;
     flex-direction: column;
     font-size: 20px;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: $fuente;
 }
 .botonform{
     display: inline-block;
@@ -386,92 +253,12 @@ label{
 /*responsive mobile 320px vertical 480px horizontal*/
 @media screen and (max-width: 480px) {
     
-    h1{
-        color: $lightLetter;
-        font-size: large;
-    }
-    input{
-        display: none;
-    }
-    .header{
-        width: 100%;
-        height: 40px;
-        background-color: $dark;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center; 
-        position: sticky;
-        top: 0;
-        z-index: 100;
-    }
-    header div{
-        height: 100%;    
-    }
-    div img{
-        height: 100%;
-    }
-    .nav-foot{
-        height: 100%;
-        width: 100%;
-        background-color: $ndl;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        justify-items: center;
-        align-items: center;
-        list-style-type: none;
-        position: sticky;
-        bottom: 0;
-    }
-    .sticky-top{
-        top: 40px;
-    }
-    li :hover{
-        color: $lightLetter;
-    }
-    footer div{
-        height: 30px;
-        width: 30px;
-    }
-    a{
-        text-decoration: none;
-        font-size: medium;
-        color: black;
-    }
-    footer div img{
-        max-width: 100%;
-    } 
-    .pagina{
-        height: 1000px;
-        grid-template-columns: repeat(2, 45%);
-        grid-template-rows: repeat(3, 30%); 
-        grid-template-areas: 
-        "portada portada"
-        "noticias noticias"
-        "frase frase";
-    }
-    .portada{
-        font-size: medium;      
-        line-height: 1.3;
-    }
     #sacrifice{
         display: none;
     }
-    .itemsportada{
-        font-size: medium;
-        height: 100%;
-        width: 45%;
-    }
-    .itemsportada h2{
-        font-size: medium;
-    }
-    .itemsportada p{
-        font-size: small;
-    }
-    .notifrase{
-        font-size: small;
-    }
+    
+
+
     .grillatrayectoria{
         display: grid;
         height: 5350px;

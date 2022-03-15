@@ -1,0 +1,42 @@
+footer{
+    
+    height: 50px;
+    width: 100%;
+    background-color: $ndl;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    justify-items: center;
+    align-items: center;
+    list-style-type: none;
+    z-index: 1;
+    position: sticky;
+    bottom: 0;
+
+    & i{
+        font-size: 40px;
+    
+        &:hover{
+            color: $lightLetter;
+            transform: scale(1.1);
+            transition: all 1s;
+        }
+    }
+    
+}
+
+
+
+/*responsive mobile 320px vertical 480px horizontal*/
+@media screen and (max-width: 480px) {
+
+    footer{
+
+        height: 45px;
+
+        & i{
+            font-size: 33px;
+        }
+    } 
+
+}
