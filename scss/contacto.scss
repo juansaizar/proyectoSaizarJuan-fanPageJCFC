@@ -1,0 +1,84 @@
+.grillacontacto{
+    width: 100%;
+    display: grid;
+    row-gap: 1rem;
+    padding-top: 1rem;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 20vh 70vh;
+    grid-template-areas: 
+    "titulo titulo"
+    "foto formulario";
+    justify-content: space-evenly;
+    justify-items: center;
+    & .titulocontacto{
+        grid-area: titulo;
+        width: 100%;
+        @include contenedores(flex, column, space-around, center);
+        @include estiloTitulo($light, 2rem, center);
+        padding: 1rem;
+        line-height: 2;
+    }
+    & .foto{
+        grid-area: foto;
+        @include contenedores(flex, row, space-evenly, none);
+    }
+    & .contacto{
+        grid-area: formulario; 
+        padding: 2rem;  
+        width: 80%;
+        @include contenedores(flex, column, space-evenly, none);
+        @include estiloTitulo($light, large, start);
+        & div .form-control{
+            background-color: $light;
+            &:focus {
+                box-shadow: none;
+            }
+        }
+        & .buttons{
+            display: flex;
+            justify-content: flex-end;
+            & .btn{
+                margin-left: 1rem;
+                width: 20%;
+                @include estiloBotones($ndl, large, $dark);
+                &:focus {
+                box-shadow: none;
+                }       
+                &:hover{
+                color: $light;
+                }
+            }
+        }
+    }    
+}
+
+
+/*responsive mobile 320px vertical 480px horizontal*/
+@media screen and (max-width: 480px){
+    .grillacontacto{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 40vh 140vh 60vh;
+        grid-template-areas: 
+        "titulo"
+        "formulario"
+        "foto";
+        font-size: large;
+        & .titulocontacto{
+            font-size: large;
+        }
+        & .contacto{
+            width: 100%;
+            font-size: medium;
+            & .buttons{
+                justify-content: space-around;
+                justify-items: center;
+                & .btn{
+                    margin-left: 0;
+                    width: 35%;
+                    font-size: small;
+                }
+            }
+        }
+    }    
+}

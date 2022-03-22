@@ -1,0 +1,45 @@
+.trayectoria{
+    color: $light;
+    width: 100%;
+    @include contenedores(flex, column, space-around, center);
+    & img{
+        padding: 1rem;
+        width: 90%;
+        border-radius: 1.5rem;
+    }
+    & h2{
+        @extend img;
+        @include estiloTitulo($light, x-large, center);
+    }    
+}
+.accordion{
+    padding: 2rem;
+    & .accordion-button{
+        width: 100%;
+        @include estiloBotones($dark, large, $ndl);
+        &:hover{
+            color: $light;
+        }
+        &:focus {
+            border-color: $light;
+            box-shadow: none;
+        }
+        &:not(.collapsed) {
+            color: $dark;
+            background-color: $ndl;
+        }
+        &:after{
+            background-image: none;
+        }
+    }
+    & .accordion-body {
+        @include estiloBotones($light, large, $dark);
+    }
+}
+
+/*responsive mobile 320px vertical 480px horizontal*/
+@media screen and (max-width: 480px) {
+    .trayectoria h2{
+        font-size: medium;
+    }
+}

@@ -1,42 +1,31 @@
 footer{
-    
     height: 50px;
     width: 100%;
     background-color: $ndl;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    @include contenedores(flex, row, space-around, center);
     justify-items: center;
-    align-items: center;
     list-style-type: none;
     z-index: 1;
-    position: sticky;
-    bottom: 0;
-
-    & i{
+    & p{
+        margin-bottom: 0;
+    }  
+    & a{
+        color: $dark;
         font-size: 40px;
-    
         &:hover{
-            color: $lightLetter;
+            color: $light;
             transform: scale(1.1);
             transition: all 1s;
         }
-    }
-    
+    }   
 }
-
-
 
 /*responsive mobile 320px vertical 480px horizontal*/
 @media screen and (max-width: 480px) {
-
     footer{
-
         height: 45px;
-
-        & i{
+        & a{
             font-size: 33px;
         }
     } 
-
 }
