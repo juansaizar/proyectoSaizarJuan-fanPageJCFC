@@ -1,31 +1,175 @@
+/*Desktop*/
 footer{
-    height: 50px;
     width: 100%;
-    background-color: $ndl;
-    @include contenedores(flex, row, space-around, center);
-    justify-items: center;
-    list-style-type: none;
-    z-index: 1;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    background-color: $lessLight;
+    @include contenedores(flex, row, space-between, center);
+    & div{
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+    & a{
+        @include estiloIconos($ndl, 2rem);
+        &:hover{
+            @include hovers($dark, scale(1.1), all 1s)
+        }
+    }
     & p{
         margin-bottom: 0;
+        font-weight: lighter;
     }  
-    & a{
-        color: $dark;
-        font-size: 40px;
-        &:hover{
-            color: $light;
-            transform: scale(1.1);
-            transition: all 1s;
+    & .logoUpper{
+        width: 15%;
+        @include contenedores(flex, column, space-around, center);
+        border-right: $ndl;
+        border-right-style: solid; 
+        & a:hover{
+            @include hovers($dark, translate(0, -10px) scale(1.3), all 1s)
         }
-    }   
+        & img{
+            width: 3.5rem;
+        }
+    }
+    & .thanks{
+        text-align: center;
+        width: 40%;
+        & h3{
+            @include estiloTitulo($dark, 1.2rem, center)
+        }      
+        & i{
+            font-weight: lighter;
+        } 
+    }
+    & .contact{
+        width: 45%;
+        border-left: $ndl;
+        border-left-style: solid;
+        & .eMail{
+            padding-bottom: .5rem;
+            width: 100%;
+            @include contenedores(flex, row, space-around, center); 
+        }
+        & .socialMedia{
+            border-top: $ndl;
+            border-top-style: solid;
+            padding-top: .5rem;
+            width: 100%;
+            @include contenedores(flex, row, space-around, center);
+        }
+    }
 }
 
-/*responsive mobile 320px vertical 480px horizontal*/
+/*Responsive mobile 300px vertical 480px horizontal*/
 @media screen and (max-width: 480px) {
     footer{
-        height: 45px;
+        width: 100%;
+        @include contenedores(flex, column, space-around, center);
+        & div{
+            padding-bottom: .5rem;
+        }  
+        & p{
+            @include estiloTitulo($dark, .7rem, center)
+        }  
         & a{
-            font-size: 33px;
+            @include estiloIconos($ndl, 1.5rem);
         }
-    } 
+        & .logoUpper{
+            width: 100%;
+            border-right-style: none; 
+            & img{
+                width: 2.5rem;
+            }
+        }
+        & .thanks{
+            width: 100%;
+            & h3{
+                @include estiloTitulo($dark, .7rem, center)
+            } 
+            & i{
+                font-size: .7rem;
+            }      
+        }
+        & .contact{
+            width: 100%;
+            border-left-style: none;
+            padding-bottom: 0;
+        }
+    }
+}
+
+/*Responsive tablet vertical*/
+@media screen and (min-width: 480px) and (max-width: 768px){
+    footer{
+        @include contenedores(flex, column, space-around, center);
+        & div{
+            padding-bottom: .5rem;
+        }  
+        & p{
+            @include estiloTitulo($dark, 1rem, center)
+        }  
+        & a{
+            @include estiloIconos($ndl, 1.7rem);
+        }
+        & .logoUpper{ 
+            width: 100%;
+            border-right-style: none;
+            & img{
+                width: 2.7rem;
+            }
+        }
+        & .thanks{
+            width: 100%;
+            & h3{
+                @include estiloTitulo($dark, 1rem, center)
+            } 
+            & i{
+                font-size: 1rem;
+            }      
+        }
+        & .contact{
+            width: 100%;
+            border-left-style: none;
+            padding-bottom: 0;
+            & .eMail{ 
+                & p{
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
+
+/*Responsive tablet horizontal*/
+@media screen and (min-width: 769px) and (max-width: 1024px){
+    footer{
+        & div{
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+        & a{
+            @include estiloIconos($ndl, 1.5rem);
+        }
+        & p{
+            @include estiloTitulo($dark, .8rem, center)
+        }  
+        & .logoUpper{
+            width: 15%;
+            & img{
+                width: 3rem;
+            }
+        }
+        & .thanks{
+            width: 40%;
+            & h3{
+                @include estiloTitulo($dark, 1rem, center)
+            }      
+            & i{
+                font-size: .8rem;
+            } 
+        }
+        & .contact{
+            width: 45%;
+        }
+    }
 }

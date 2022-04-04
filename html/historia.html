@@ -16,44 +16,35 @@
     <title>Johan Cruyff Football Club - Trayectoria Historia</title>
 </head>
 <body>
-    <header class="header">
-        <div class="logo">
-            <a href="../index.html">
-                <img src="../img/johan-cruyff-color-PNG.png" alt="">
-            </a>
-        </div>
-        <h1 id="sacrifice">JOHAN CRUYFF F.C.</h1>
-        <div class="escudo">
-            <img src="../img/Jong-Ajax.png" alt="">
-        </div>
-        <div class="escudo">
-            <img src="../img/FC-Barcelona.png" alt="">
-        </div>
-        <div class="escudo">
-            <img src="../img/NDL.png" alt="">
-        </div>
-    </header>
-    <nav class="navbar sticky-top navbar-expand-lg navbar-light">
-        <div class="container-fluid">
-            <div class="sello">
-                <a class="navbar-brand" href="#">
-                    <img src="../img/stickerC14.png" alt="">
-                </a>
-            </div>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <img src="../img/ndlMenuBurger.png" alt="">
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-link active" aria-current="page" href="../index.html">HOME</a>
-                    <a class="nav-link" href="historia.html">HISTORIA</a>
-                    <a class="nav-link" href="galeria.html">GALERIA</a>
-                    <a class="nav-link" href="espaciofans.html">ESPACIO FANS</a>
-                    <a class="nav-link" href="contacto.html">CONTACTO</a>
+    <!--BARRA NAVEGADORA-->
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <div class="logo">
+                    <a class="navbar-brand" href="../index.html">
+                        <img src="../img/logoChico.png" alt="">
+                    </a>
+                    <div id="sacrifice" class="textoLogo">
+                        <h1>JOHAN CRUYFF FOOTBALL CLUB</h1>
+                    </div>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon">
+                        <i class="bi bi-list"></i>
+                    </span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link active" aria-current="page" href="../index.html">HOME</a>
+                        <a class="nav-link" href="./historia.html">HISTORIA</a>
+                        <a class="nav-link" href="./galeria.html">GALERIA</a>
+                        <a class="nav-link" href="./espaciofans.html">ESPACIO FANS</a>
+                        <a class="nav-link" href="./contacto.html">CONTACTO</a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </header>    
     <main>
         <div class="trayectoria">
             <img data-aos="zoom-in" data-aos-duration="2000" src="../img/trayectoria.png" alt=""> 
@@ -104,10 +95,10 @@
                 </h2>
                 <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFour">
                     <div class="accordion-body">
-                        <P>
+                        <p>
                             Su aportación a la selección de su país fue decisiva y marcó una época. En 1974, con Cruyff como líder, la selección holandesa (apodada la naranja mecánica por su contundencia y el color de la camiseta) se convirtió en subcampeona del mundo con un juego asombroso. La base de la selección holandesa eran los jugadores y el sistema del Ajax, el famoso fútbol total que el técnico rumano Stefan Kovacs había impuesto al principio de los setenta en el club de Amsterdam. Con una mejor preparación física, presión en todo el campo, intercambio constante de posiciones y un fútbol rápido y ofensivo, la selección naranja arrolló a sus competidores en el Mundial de Alemania.
                             El sistema fue posible gracias a un plantel de grandes jugadores dirigidos por Rinus Michels, entrenador del Barcelona esa misma temporada. Cruyff era el líder de un extraordinario conjunto de talentos como Van Hanegen, Krol, Rijsbergen, Rep y el incombustible Neeskens, fichado también por el Barça nada más acabar el Mundial. El fútbol neerlandés deslumbró a todo el mundo; sólo tenía un defecto: la falta de resolución final ante la portería, que fue, junto con el tradicional espíritu competitivo de los alemanes, lo que impidió derrotar en la final a los anfitriones.
-                        </P>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -129,11 +120,33 @@
             </div>
         </div>
     </main>
+    <!--PIE DE PAGINA-->
     <footer>
-        <p id="sacrifice">Este sitio no es official ni tiene fines de lucro, fué creado por un fan como parte de un proyecto académico</p>
-        <a href="https://es-la.facebook.com/JohanCruyff14/"><i class="bi bi-facebook"></i></a>
-        <a href="https://twitter.com/johancruyff"><i class="bi bi-twitter"></i></a>
-        <a href="https://www.instagram.com/johancruyff/"><i class="bi bi-instagram"></i></a>
+        <div class="logoUpper">
+            <a href="#">
+                <i class="bi bi-chevron-compact-up"></i>
+            </a>
+            <img src="../img/stickerC14orange.png" alt="icon Cruyff 14">
+        </div>
+        <div class="thanks">
+            <h3>GRACIAS POR VISITARNOS!</h3>
+            <p>Este sitio es NO OFICIAL y SIN FINES DE LUCRO,</p>
+            <p>fué creado por un fan como parte de un proyecto académico.</p>
+            <i class="bi bi-bootstrap-reboot">desarrollado por jSwD todos los derechos reservados</i>
+        </div>
+        <div class="contact">
+            <!--LINK A FORMULARIO DE CONTACTO-->
+            <div class="eMail">
+                <a href="../html/contacto.html"><i class="bi bi-envelope-fill"></i></a>
+                <p>info@johancruyfffc.com</p>
+            </div>
+            <!--ENLACES A REDES SOCIALES OFICIALES-->
+            <div class="socialMedia">
+                <a href="https://es-la.facebook.com/JohanCruyff14/"><i class="bi bi-facebook"></i></a>
+                <a href="https://twitter.com/johancruyff"><i class="bi bi-twitter"></i></a>
+                <a href="https://www.instagram.com/johancruyff/"><i class="bi bi-instagram"></i></a>
+            </div>
+        </div>
     </footer>  
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>

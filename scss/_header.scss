@@ -1,35 +1,5 @@
-.header{
-  @include contenedores(flex, row, space-around, center);
-  width: 100%;
-  height: 100px;
-  background-color: $dark;
+header{
   position: sticky;
   top: 0;
   z-index: 100;
-  & h1{
-    @include estiloTitulo($light, 5rem, center);
-  }
-  & div{
-    height: 100%;
-    img{
-      height: 100%;
-    }  
-  }
-  & .logo:hover{
-    transform: scale(1.2);
-    transition: all 1.5s;
-  }
-  & .escudo{
-    height: 80%;
-  }
-}
-
-/*responsive mobile 320px vertical 480px horizontal*/
-@media screen and (max-width: 480px) {
-  .header{
-    height: 50px;
-    & .escudo{
-      height: 75%;
-    }
-  }                     
 }

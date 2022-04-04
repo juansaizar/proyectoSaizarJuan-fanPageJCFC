@@ -10,6 +10,7 @@
 @import 'contacto';
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
 
+/*estilo gral para todas las paginas*/
 *{
     margin: 0;
     padding: 0;
@@ -19,10 +20,10 @@ body{
     font-family: $fuente;
 }
 
-/*responsive mobile 320px vertical 480px horizontal*/
+/*responsive mobile 300px vertical 480px horizontal*/
 @media screen and (max-width: 480px) {
     
-    /*hay elemententos que se eliminan al aplicarse la media*/
+    /*hay elemententos que se eliminan al aplicarse la media mobile*/
     #sacrifice{
         display: none;
     }

@@ -1,54 +1,81 @@
+/*Desktop y responsive tablets*/
 .navbar{
-    height: 50px;
-    position: sticky;
-    @include contenedores(flex, row, space-around, center);
-    z-index: 100;
-    & .nav-link{
-        padding: 0;
-        text-decoration: none;
-        font-size: 30px;
-        &:hover{
-            transition: all 1s;
-            color: $light !important;
+    background-color: $dark;
+    opacity: .95;
+    font-size: 1rem;
+    color: $light !important;
+    border-bottom: $ndl;
+    border-bottom-style: solid;
+    @include contenedores(flex, row, flex-end, center);
+    & .container-fluid{
+        & .logo{
+            @include contenedores(flex, row, space-around, center);
+            & .navbar-brand{
+                @extend .logo;
+                margin-right: 0;
+                & img{                 
+                    padding-right: 10px;
+                    &:hover{
+                        @include hovers(none, scale(1.1), all 1s)
+                    }
+                }
+            }
+            & .textoLogo h1{
+                width: 190px;
+                margin-bottom: 0;
+                font-size: 1.6rem;
+                line-height: 1;
+                font-weight: lighter;
+            }
         }
-    }
-    & .sello{
-        height: 48px;
-        display: flex;
-        align-content: center;
-        & a img{
-            height: 100%;
+        .navbar-toggler{
+            border: none; 
+            @include estiloIconos($ndl, 2rem); 
+            color: $ndl;
+            &:focus{
+                box-shadow: none;
+            }
         }
-    }   
-}
-.sticky-top{
-    top: 100px;
-    background-color: $ndl;
-}
-.navbar-nav{
-    background-color: $ndl;
-}
-.navbar-toggler {
-    border: none; 
-    &:focus{
-        box-shadow: none;
+        .navbar-collapse{
+            justify-content: flex-end;
+            & .navbar-nav{
+                text-align: end;
+                font-weight: lighter;
+                .nav-link{
+                    color: $ndl;
+                    &:hover{
+                        @include hovers($light !important, scale(1.05), all 1s)
+                    }
+                }
+            }
+            
+        }
     }
 }
 
-/*responsive mobile 320px vertical 480px horizontal*/
+
+/*responsive mobile 300px vertical 480px horizontal*/
 @media screen and (max-width: 480px) {
-    nav{  
-        & .nav-link{
-            font-size: 20px;
-        }
-        &.sello{
-            height: 45px;
-        } 
-    }
-    .sticky-top{
-        top: 50px;
-    }
     .navbar{
-        padding: 0;
-    }                 
+        & .container-fluid{
+            & .logo{
+                & .navbar-brand{
+                    & img{                 
+                        width: 70%;
+                    }
+                }
+            }
+            & .navbar-toggler{ 
+                @include estiloIconos($ndl, 1.5rem);
+            }
+            & .navbar-collapse{
+                & .navbar-nav{
+                    .nav-link{
+                        font-size: .7rem;
+                    }
+                }
+                
+            }
+        }
+    }
 }

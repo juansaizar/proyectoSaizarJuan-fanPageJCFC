@@ -1,5 +1,6 @@
 
-/*$display= tipo de contenedor
+/*Contenedores
+  $display= tipo de contenedor
   $direccion= orientación de los elementos de contenedor, fila o columna
   $disposicion= ubicación de los elementos dentro del contenedor
   $alineacion= alineación de los elementos dentro del contenedor, izquierda-centro-derecha*/
@@ -10,7 +11,8 @@
   align-items: $alineacion;
 }
 
-/*$colorBoton= color del cuerpo del botón
+/*Botones
+  $colorBoton= color del cuerpo del botón
   $tamanioFuente= tamaño del texto del botón
   $colorFuente= color del texto del botón*/
 @mixin estiloBotones($colorBoton, $tamanioFuente, $colorFuente) {
@@ -19,11 +21,30 @@
   color: $colorFuente;
 }
 
-/*$colorFuente= color de la fuente
+/*Titulos
+  $colorFuente= color de la fuente
   $tamanioFuente= tamaño de la fuente
   $alineacion= alineación del texto, izquierda-centro-derecha*/
 @mixin estiloTitulo($colorFuente, $tamanioFuente, $alineacion) {
   color: $colorFuente;
   font-size: $tamanioFuente;
   text-align: $alineacion;    
+}
+
+/*Iconos que se comportan como texto
+  $colorIcon= color del icono
+  $tamanioIcon= tamaño del icono*/
+@mixin estiloIconos($colorIcono, $tamanioIcono) {
+  color: $colorIcono;
+  font-size: $tamanioIcono;
+}
+
+/*Cambios de estilo al aplicarse el hover
+  $color= color al que cambiará el texto/icono
+  $transformacion= tipo de transformacion
+  $transicion= forma y tiempo de ejecución de la transformación*/
+@mixin hovers($color, $transformacion, $transicion) {
+  color: $color;
+  transform: $transformacion;
+  transition: $transicion;
 }
