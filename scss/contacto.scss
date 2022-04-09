@@ -1,33 +1,50 @@
+/*Desktop y tablet*/
+.fondoContacto{
+    background: url(../img/backGroundContacto.png);
+    height: 100%;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
 .grillacontacto{
     width: 100%;
     display: grid;
-    row-gap: 1rem;
     padding-top: 1rem;
     grid-template-columns: 40% 60%;
-    grid-template-rows: 20vh 70vh;
+    grid-template-rows: auto;
     grid-template-areas: 
     "titulo titulo"
     "foto formulario";
     justify-content: space-evenly;
     justify-items: center;
+    column-gap: 2rem;
     & .titulocontacto{
         grid-area: titulo;
         width: 100%;
         @include contenedores(flex, column, space-around, center);
-        @include estiloTitulo($light, 2rem, center);
-        padding: 1rem;
+        @include estiloTexto($ndl, 1.2rem, center);
+        padding-top: 1rem;
         line-height: 2;
+        & h2{
+            font-size: 1.4rem;
+            font-weight: lighter;
+        }
     }
     & .foto{
         grid-area: foto;
-        @include contenedores(flex, row, space-evenly, none);
+        @include contenedores(flex, column, end, center);
+        & img{
+            width: 100%;
+            max-height: fit-content;
+        }
     }
     & .contacto{
         grid-area: formulario; 
         padding: 2rem;  
         width: 80%;
         @include contenedores(flex, column, space-evenly, none);
-        @include estiloTitulo($light, large, start);
+        @include estiloTexto($ndl, 1rem, left);
         & div .form-control{
             background-color: $light;
             &:focus {
@@ -35,12 +52,11 @@
             }
         }
         & .buttons{
-            display: flex;
-            justify-content: flex-end;
+            @include contenedores(flex, row, flex-end, center);
+            gap: 1rem;
             & .btn{
-                margin-left: 1rem;
-                width: 20%;
-                @include estiloBotones($ndl, large, $dark);
+                width: 6rem;
+                @include estiloBotones($ndl, 1rem, $dark);
                 &:focus {
                 box-shadow: none;
                 }       
@@ -52,33 +68,76 @@
     }    
 }
 
-
-/*responsive mobile 320px vertical 480px horizontal*/
+/*MEDIAS QUERIES*/
+/*Responsive mobile vertical y horizontal*/
 @media screen and (max-width: 480px){
     .grillacontacto{
-        display: grid;
         grid-template-columns: 100%;
-        grid-template-rows: 40vh 140vh 60vh;
         grid-template-areas: 
         "titulo"
         "formulario"
         "foto";
-        font-size: large;
         & .titulocontacto{
-            font-size: large;
+            font-size: .7rem;
+            & h2{
+                font-size: 1rem;
+            }
+        }
+        & .foto{
+            grid-area: foto;
+            & img{
+                width: 80%;
+            }
         }
         & .contacto{
             width: 100%;
-            font-size: medium;
+            font-size: .7rem;
+            & .form-control{
+                font-size: .7rem;
+            }
             & .buttons{
-                justify-content: space-around;
-                justify-items: center;
+                @include contenedores(flex, row, space-evenly, center);
+                gap: 0rem;
                 & .btn{
-                    margin-left: 0;
-                    width: 35%;
-                    font-size: small;
+                    width: 5rem;
+                    font-size: .7rem;
                 }
             }
         }
     }    
 }
+
+/*Responsive tablet pequeña*/
+@media screen and (min-width: 481px) and (max-width: 768px){
+    .grillacontacto{
+        grid-template-columns: 50% 50%;
+        column-gap: 1rem;
+        & .titulocontacto{
+            font-size: 1rem;
+            & h2{
+                font-size: 1.2rem;
+            }
+        }
+        & .foto{
+            grid-area: foto;
+            & img{
+                width: 90%;
+            }
+        }
+        & .contacto{
+            width: 100%;
+            font-size: 1rem;
+            padding: 1rem;
+            & .form-control{
+                font-size: 1rem;
+            }
+            & .buttons{
+                @include contenedores(flex, row, space-evenly, center);
+                gap: 0rem;
+            }
+        }
+    } 
+}
+
+
+

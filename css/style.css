@@ -10,7 +10,7 @@
   $colorBoton= color del cuerpo del botón
   $tamanioFuente= tamaño del texto del botón
   $colorFuente= color del texto del botón*/
-/*Titulos
+/*Texto
   $colorFuente= color de la fuente
   $tamanioFuente= tamaño de la fuente
   $alineacion= alineación del texto, izquierda-centro-derecha*/
@@ -29,8 +29,8 @@ header {
 
 /*Desktop y responsive tablets*/
 .navbar {
-  background-color: #160d07;
-  opacity: .95;
+  background-color: #090503;
+  opacity: .9;
   font-size: 1rem;
   color: #e3dfd1 !important;
   border-bottom: #e99348;
@@ -68,8 +68,7 @@ header {
   .navbar .container-fluid .navbar-collapse {
     justify-content: flex-end; }
     .navbar .container-fluid .navbar-collapse .navbar-nav {
-      text-align: end;
-      font-weight: lighter; }
+      text-align: end; }
       .navbar .container-fluid .navbar-collapse .navbar-nav .nav-link {
         color: #e99348; }
         .navbar .container-fluid .navbar-collapse .navbar-nav .nav-link:hover {
@@ -98,55 +97,50 @@ footer {
   justify-content: space-between;
   align-items: center; }
   footer div {
-    padding-left: 3rem;
-    padding-right: 3rem; }
+    padding-left: 5%;
+    padding-right: 5%; }
   footer a {
     color: #e99348;
-    font-size: 2rem; }
+    font-size: 1.2rem; }
     footer a:hover {
-      color: #160d07;
+      color: #090503;
       transform: scale(1.1);
       transition: all 1s; }
   footer p {
-    margin-bottom: 0;
-    font-weight: lighter; }
+    margin-bottom: 0; }
   footer .logoUpper {
-    width: 15%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     border-right: #e99348;
-    border-right-style: solid; }
+    border-right-style: ridge; }
     footer .logoUpper a:hover {
-      color: #160d07;
+      color: #090503;
       transform: translate(0, -10px) scale(1.3);
       transition: all 1s; }
     footer .logoUpper img, footer .logoUpper .trayectoria h2, .trayectoria footer .logoUpper h2, footer .logoUpper .trayectoria .pagina .portada .itemsportada p, .trayectoria .pagina .portada .itemsportada footer .logoUpper p, footer .logoUpper .pagina .portada .itemsportada .trayectoria p, .pagina .portada .itemsportada .trayectoria footer .logoUpper p {
-      width: 3.5rem; }
+      width: 3rem; }
   footer .thanks {
-    text-align: center;
-    width: 40%; }
+    text-align: center; }
     footer .thanks h3 {
-      color: #160d07;
+      color: #090503;
       font-size: 1.2rem;
       text-align: center; }
-    footer .thanks i {
-      font-weight: lighter; }
   footer .contact {
-    width: 45%;
+    width: 35%;
     border-left: #e99348;
-    border-left-style: solid; }
+    border-left-style: ridge; }
     footer .contact .eMail {
       padding-bottom: .5rem;
       width: 100%;
       display: flex;
       flex-direction: row;
-      justify-content: space-around;
+      justify-content: space-evenly;
       align-items: center; }
     footer .contact .socialMedia {
       border-top: #e99348;
-      border-top-style: solid;
+      border-top-style: ridge;
       padding-top: .5rem;
       width: 100%;
       display: flex;
@@ -154,7 +148,8 @@ footer {
       justify-content: space-around;
       align-items: center; }
 
-/*Responsive mobile 300px vertical 480px horizontal*/
+/*MEDIAS QUERIES*/
+/*Responsive mobile vertical y horizontal*/
 @media screen and (max-width: 480px) {
   footer {
     width: 100%;
@@ -165,32 +160,34 @@ footer {
     footer div {
       padding-bottom: .5rem; }
     footer p {
-      color: #160d07;
+      color: #090503;
       font-size: 0.7rem;
       text-align: center; }
     footer a {
       color: #e99348;
-      font-size: 1.5rem; }
+      font-size: 1rem; }
     footer .logoUpper {
       width: 100%;
       border-right-style: none; }
       footer .logoUpper img, footer .logoUpper .trayectoria h2, .trayectoria footer .logoUpper h2, footer .logoUpper .trayectoria .pagina .portada .itemsportada p, .trayectoria .pagina .portada .itemsportada footer .logoUpper p, footer .logoUpper .pagina .portada .itemsportada .trayectoria p, .pagina .portada .itemsportada .trayectoria footer .logoUpper p {
         width: 2.5rem; }
     footer .thanks {
+      padding-top: 1rem;
       width: 100%; }
       footer .thanks h3 {
-        color: #160d07;
+        color: #090503;
         font-size: 0.7rem;
         text-align: center; }
       footer .thanks i {
         font-size: .7rem; }
     footer .contact {
-      width: 100%;
+      padding-top: 1rem;
+      width: 70%;
       border-left-style: none;
       padding-bottom: 0; } }
 
-/*Responsive tablet vertical*/
-@media screen and (min-width: 480px) and (max-width: 768px) {
+/*Responsive tablet pequeña*/
+@media screen and (min-width: 481px) and (max-width: 768px) {
   footer {
     display: flex;
     flex-direction: column;
@@ -199,58 +196,53 @@ footer {
     footer div {
       padding-bottom: .5rem; }
     footer p {
-      color: #160d07;
+      color: #090503;
       font-size: 1rem;
       text-align: center; }
     footer a {
       color: #e99348;
-      font-size: 1.7rem; }
+      font-size: 1rem; }
     footer .logoUpper {
       width: 100%;
       border-right-style: none; }
       footer .logoUpper img, footer .logoUpper .trayectoria h2, .trayectoria footer .logoUpper h2, footer .logoUpper .trayectoria .pagina .portada .itemsportada p, .trayectoria .pagina .portada .itemsportada footer .logoUpper p, footer .logoUpper .pagina .portada .itemsportada .trayectoria p, .pagina .portada .itemsportada .trayectoria footer .logoUpper p {
         width: 2.7rem; }
     footer .thanks {
+      padding-top: 1rem;
       width: 100%; }
       footer .thanks h3 {
-        color: #160d07;
+        color: #090503;
         font-size: 1rem;
         text-align: center; }
       footer .thanks i {
         font-size: 1rem; }
     footer .contact {
-      width: 100%;
+      padding-top: 1rem;
+      width: 60%;
       border-left-style: none;
       padding-bottom: 0; }
       footer .contact .eMail p {
         font-size: 1rem; } }
 
-/*Responsive tablet horizontal*/
+/*Responsive tablet*/
 @media screen and (min-width: 769px) and (max-width: 1024px) {
-  footer div {
-    padding-left: 2rem;
-    padding-right: 2rem; }
   footer a {
     color: #e99348;
-    font-size: 1.5rem; }
+    font-size: 1rem; }
   footer p {
-    color: #160d07;
+    color: #090503;
     font-size: 0.8rem;
     text-align: center; }
-  footer .logoUpper {
-    width: 15%; }
-    footer .logoUpper img, footer .logoUpper .trayectoria h2, .trayectoria footer .logoUpper h2, footer .logoUpper .trayectoria .pagina .portada .itemsportada p, .trayectoria .pagina .portada .itemsportada footer .logoUpper p, footer .logoUpper .pagina .portada .itemsportada .trayectoria p, .pagina .portada .itemsportada .trayectoria footer .logoUpper p {
-      width: 3rem; }
-  footer .thanks {
-    width: 40%; }
-    footer .thanks h3 {
-      color: #160d07;
-      font-size: 1rem;
-      text-align: center; }
-    footer .thanks i {
-      font-size: .8rem; }
+  footer .logoUpper img, footer .logoUpper .trayectoria h2, .trayectoria footer .logoUpper h2, footer .logoUpper .trayectoria .pagina .portada .itemsportada p, .trayectoria .pagina .portada .itemsportada footer .logoUpper p, footer .logoUpper .pagina .portada .itemsportada .trayectoria p, .pagina .portada .itemsportada .trayectoria footer .logoUpper p {
+    width: 3rem; }
+  footer .thanks h3 {
+    color: #090503;
+    font-size: 1rem;
+    text-align: center; }
+  footer .thanks i {
+    font-size: .8rem; }
   footer .contact {
-    width: 45%; } }
+    width: 35%; } }
 
 .pagina {
   color: #e3dfd1;
@@ -356,7 +348,7 @@ footer {
   padding: 2rem; }
   .accordion .accordion-button {
     width: 100%;
-    background-color: #160d07;
+    background-color: #090503;
     font-size: large;
     color: #e99348; }
     .accordion .accordion-button:hover {
@@ -365,14 +357,14 @@ footer {
       border-color: #e3dfd1;
       box-shadow: none; }
     .accordion .accordion-button:not(.collapsed) {
-      color: #160d07;
+      color: #090503;
       background-color: #e99348; }
     .accordion .accordion-button:after {
       background-image: none; }
   .accordion .accordion-body {
     background-color: #e3dfd1;
     font-size: large;
-    color: #160d07; }
+    color: #090503; }
 
 /*responsive mobile 320px vertical 480px horizontal*/
 @media screen and (max-width: 480px) {
@@ -451,7 +443,7 @@ footer {
       border-bottom-right-radius: 0.25rem;
       background-color: #e3dfd1; }
       .grillafans .card .card-body .btn {
-        background-color: #160d07;
+        background-color: #090503;
         font-size: large;
         color: #e99348; }
         .grillafans .card .card-body .btn:focus {
@@ -501,16 +493,24 @@ footer {
     .grillafans .card .card-body .btn {
       font-size: medium; } }
 
+/*Desktop y tablet*/
+.fondoContacto {
+  background: url(../img/backGroundContacto.png);
+  height: 100%;
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
 .grillacontacto {
   width: 100%;
   display: grid;
-  row-gap: 1rem;
   padding-top: 1rem;
   grid-template-columns: 40% 60%;
-  grid-template-rows: 20vh 70vh;
+  grid-template-rows: auto;
   grid-template-areas: "titulo titulo" "foto formulario";
   justify-content: space-evenly;
-  justify-items: center; }
+  justify-items: center;
+  column-gap: 2rem; }
   .grillacontacto .titulocontacto {
     grid-area: titulo;
     width: 100%;
@@ -518,17 +518,23 @@ footer {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    color: #e3dfd1;
-    font-size: 2rem;
+    color: #e99348;
+    font-size: 1.2rem;
     text-align: center;
-    padding: 1rem;
+    padding-top: 1rem;
     line-height: 2; }
+    .grillacontacto .titulocontacto h2, .grillacontacto .titulocontacto .pagina .portada .itemsportada p, .pagina .portada .itemsportada .grillacontacto .titulocontacto p {
+      font-size: 1.4rem;
+      font-weight: lighter; }
   .grillacontacto .foto {
     grid-area: foto;
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: none; }
+    flex-direction: column;
+    justify-content: end;
+    align-items: center; }
+    .grillacontacto .foto img, .grillacontacto .foto .trayectoria h2, .trayectoria .grillacontacto .foto h2, .grillacontacto .foto .trayectoria .pagina .portada .itemsportada p, .trayectoria .pagina .portada .itemsportada .grillacontacto .foto p, .grillacontacto .foto .pagina .portada .itemsportada .trayectoria p, .pagina .portada .itemsportada .trayectoria .grillacontacto .foto p {
+      width: 100%;
+      max-height: fit-content; }
   .grillacontacto .contacto {
     grid-area: formulario;
     padding: 2rem;
@@ -537,47 +543,83 @@ footer {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: none;
-    color: #e3dfd1;
-    font-size: large;
-    text-align: start; }
+    color: #e99348;
+    font-size: 1rem;
+    text-align: left; }
     .grillacontacto .contacto div .form-control {
       background-color: #e3dfd1; }
       .grillacontacto .contacto div .form-control:focus {
         box-shadow: none; }
     .grillacontacto .contacto .buttons {
       display: flex;
-      justify-content: flex-end; }
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 1rem; }
       .grillacontacto .contacto .buttons .btn {
-        margin-left: 1rem;
-        width: 20%;
+        width: 6rem;
         background-color: #e99348;
-        font-size: large;
-        color: #160d07; }
+        font-size: 1rem;
+        color: #090503; }
         .grillacontacto .contacto .buttons .btn:focus {
           box-shadow: none; }
         .grillacontacto .contacto .buttons .btn:hover {
           color: #e3dfd1; }
 
-/*responsive mobile 320px vertical 480px horizontal*/
+/*MEDIAS QUERIES*/
+/*Responsive mobile vertical y horizontal*/
 @media screen and (max-width: 480px) {
   .grillacontacto {
-    display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 40vh 140vh 60vh;
-    grid-template-areas: "titulo" "formulario" "foto";
-    font-size: large; }
+    grid-template-areas: "titulo" "formulario" "foto"; }
     .grillacontacto .titulocontacto {
-      font-size: large; }
+      font-size: .7rem; }
+      .grillacontacto .titulocontacto h2, .grillacontacto .titulocontacto .pagina .portada .itemsportada p, .pagina .portada .itemsportada .grillacontacto .titulocontacto p {
+        font-size: 1rem; }
+    .grillacontacto .foto {
+      grid-area: foto; }
+      .grillacontacto .foto img, .grillacontacto .foto .trayectoria h2, .trayectoria .grillacontacto .foto h2, .grillacontacto .foto .trayectoria .pagina .portada .itemsportada p, .trayectoria .pagina .portada .itemsportada .grillacontacto .foto p, .grillacontacto .foto .pagina .portada .itemsportada .trayectoria p, .pagina .portada .itemsportada .trayectoria .grillacontacto .foto p {
+        width: 80%; }
     .grillacontacto .contacto {
       width: 100%;
-      font-size: medium; }
+      font-size: .7rem; }
+      .grillacontacto .contacto .form-control {
+        font-size: .7rem; }
       .grillacontacto .contacto .buttons {
-        justify-content: space-around;
-        justify-items: center; }
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 0rem; }
         .grillacontacto .contacto .buttons .btn {
-          margin-left: 0;
-          width: 35%;
-          font-size: small; } }
+          width: 5rem;
+          font-size: .7rem; } }
+
+/*Responsive tablet pequeña*/
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .grillacontacto {
+    grid-template-columns: 50% 50%;
+    column-gap: 1rem; }
+    .grillacontacto .titulocontacto {
+      font-size: 1rem; }
+      .grillacontacto .titulocontacto h2, .grillacontacto .titulocontacto .pagina .portada .itemsportada p, .pagina .portada .itemsportada .grillacontacto .titulocontacto p {
+        font-size: 1.2rem; }
+    .grillacontacto .foto {
+      grid-area: foto; }
+      .grillacontacto .foto img, .grillacontacto .foto .trayectoria h2, .trayectoria .grillacontacto .foto h2, .grillacontacto .foto .trayectoria .pagina .portada .itemsportada p, .trayectoria .pagina .portada .itemsportada .grillacontacto .foto p, .grillacontacto .foto .pagina .portada .itemsportada .trayectoria p, .pagina .portada .itemsportada .trayectoria .grillacontacto .foto p {
+        width: 90%; }
+    .grillacontacto .contacto {
+      width: 100%;
+      font-size: 1rem;
+      padding: 1rem; }
+      .grillacontacto .contacto .form-control {
+        font-size: 1rem; }
+      .grillacontacto .contacto .buttons {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 0rem; } }
 
 /*estilo gral para todas las paginas*/
 * {
@@ -585,8 +627,9 @@ footer {
   padding: 0; }
 
 body {
-  background-color: #160d07;
-  font-family: "Ubuntu", sans-serif; }
+  background-color: #090503;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: lighter; }
 
 /*responsive mobile 300px vertical 480px horizontal*/
 @media screen and (max-width: 480px) {

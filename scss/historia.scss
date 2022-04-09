@@ -9,7 +9,7 @@
     }
     & h2{
         @extend img;
-        @include estiloTitulo($light, x-large, center);
+        @include estiloTexto($light, x-large, center);
     }    
 }
 .accordion{

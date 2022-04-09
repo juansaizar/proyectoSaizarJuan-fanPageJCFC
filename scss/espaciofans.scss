@@ -16,7 +16,7 @@
         width: 100%;
         @include contenedores(flex, column, space-evenly, center);
         align-content: space-around;
-        @include estiloTitulo($light, 2rem, center);
+        @include estiloTexto($light, 2rem, center);
     }
     & h2{
         grid-area: t1;

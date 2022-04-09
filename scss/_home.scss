@@ -24,7 +24,7 @@
             align-content: space-around;
             align-items: center;
             & h2{
-                @include estiloTitulo($light, 3rem, center);
+                @include estiloTexto($light, 3rem, center);
                 padding-left: 1rem;
                 padding-right: 1rem;
             }
@@ -52,7 +52,7 @@
             @include contenedores(flex, column, space-around, center);
             width: 90%;
             height: max-content;
-            @include estiloTitulo($light, x-large, center);
+            @include estiloTexto($light, x-large, center);
             & p{
                 margin-bottom: 0;
             }

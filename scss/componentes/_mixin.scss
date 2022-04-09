@@ -1,4 +1,3 @@
-
 /*Contenedores
   $display= tipo de contenedor
   $direccion= orientación de los elementos de contenedor, fila o columna
@@ -21,11 +20,11 @@
   color: $colorFuente;
 }
 
-/*Titulos
+/*Texto
   $colorFuente= color de la fuente
   $tamanioFuente= tamaño de la fuente
   $alineacion= alineación del texto, izquierda-centro-derecha*/
-@mixin estiloTitulo($colorFuente, $tamanioFuente, $alineacion) {
+@mixin estiloTexto($colorFuente, $tamanioFuente, $alineacion) {
   color: $colorFuente;
   font-size: $tamanioFuente;
   text-align: $alineacion;    
