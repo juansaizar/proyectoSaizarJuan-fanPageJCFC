@@ -2,10 +2,9 @@
 .navbar{
     background-color: $dark;
     opacity: .9;
-    font-size: 1rem;
+    font-size: $medium;
     color: $light !important;
-    border-bottom: $ndl;
-    border-bottom-style: solid;
+    @include estiloBordes($ndl, solid, medium, none);
     @include contenedores(flex, row, flex-end, center);
     & .container-fluid{
         & .logo{
@@ -23,7 +22,7 @@
             & .textoLogo h1{
                 width: 190px;
                 margin-bottom: 0;
-                font-size: 1.6rem;
+                font-size: $xx-large;
                 line-height: 1;
                 font-weight: lighter;
             }
@@ -43,7 +42,7 @@
                 .nav-link{
                     color: $ndl;
                     &:hover{
-                        @include hovers($light !important, scale(1.05), all 1s)
+                        @include hovers($light !important, scale(1.02), all 1s)
                     }
                 }
             }
@@ -52,8 +51,8 @@
     }
 }
 
-
-/*responsive mobile 300px vertical 480px horizontal*/
+/*MEDIAS QUERIES*/
+/*Responsive mobile vertical y horizontal*/
 @media screen and (max-width: 480px) {
     .navbar{
         & .container-fluid{
@@ -70,7 +69,7 @@
             & .navbar-collapse{
                 & .navbar-nav{
                     .nav-link{
-                        font-size: .7rem;
+                        font-size: $small;
                     }
                 }
                 

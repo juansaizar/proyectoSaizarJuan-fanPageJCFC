@@ -1,45 +1,118 @@
+/*Desktop y tablet*/
 .trayectoria{
-    color: $light;
+    position: relative;
+    display: inline-block;
     width: 100%;
-    @include contenedores(flex, column, space-around, center);
+    @include estiloBordes($ndl, solid, thin, 0rem);
     & img{
-        padding: 1rem;
-        width: 90%;
-        border-radius: 1.5rem;
+        width: 100%;
     }
     & h2{
-        @extend img;
-        @include estiloTexto($light, x-large, center);
+        width: 100%;
+        position: absolute;
+        top: 7%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-weight: lighter;
+        @include estiloTexto($ndl, $x-large, center);
     }    
 }
-.accordion{
-    padding: 2rem;
-    & .accordion-button{
-        width: 100%;
-        @include estiloBotones($dark, large, $ndl);
-        &:hover{
-            color: $light;
+.historia{
+    .resumen-homenajes{
+        @include contenedores(flex, column, space-between, left);
+        gap: 1rem;
+        padding-top: 2rem;
+        padding-bottom: 3rem;
+        @include estiloTexto($light, $medium, left);
+        line-height: 2rem;
+        & h3{
+            @include estiloBordes($ndl, solid, thin, 1rem);
+            @include estiloTexto($light, $large, left);
+            font-weight: lighter;
         }
-        &:focus {
-            border-color: $light;
-            box-shadow: none;
+        & p{
+            margin-bottom: 0;
         }
-        &:not(.collapsed) {
-            color: $dark;
-            background-color: $ndl;
-        }
-        &:after{
-            background-image: none;
+        & img{
+            width: 100%;
+            border-radius: 0.25rem;
         }
     }
-    & .accordion-body {
-        @include estiloBotones($light, large, $dark);
+    .accordion{
+        & .accordion-button{
+            font-weight: lighter;
+            width: 100%;
+            @include estiloBotones($dark, $medium, $ndl);
+            &:hover{
+                color: $light;
+            }
+            &:focus {
+                border-color: $light;
+                box-shadow: none;
+            }
+            &:not(.collapsed) {
+                color: $dark;
+                background-color: $ndl;
+            }
+            &:after{
+                background-image: none;
+            }
+        }
+        & .accordion-body {
+            @include estiloBotones($light, $medium, $dark);
+        }
     }
 }
 
-/*responsive mobile 320px vertical 480px horizontal*/
-@media screen and (max-width: 480px) {
+/*MEDIAS QUERIES*/
+/*Responsive tablet pequeña*/
+@media screen and (min-width: 481px) and (max-width: 768px){
     .trayectoria h2{
-        font-size: medium;
+        font-size: $x-large;
     }
+    .historia{
+        .resumen-homenajes{
+            padding-top: 1.5rem;
+            padding-bottom: 2rem;
+            font-size: $medium;
+            line-height: 1.5rem;
+            & h3{
+                font-size: $medium;
+            }
+        }
+        .accordion{
+            & .accordion-button{
+                font-size: $medium; 
+            }
+            & .accordion-body {
+                font-size: $medium; 
+            }
+        }
+    }     
+}
+
+/*Responsive mobile vertical y horizontal*/
+@media screen and (max-width: 480px){
+    .trayectoria h2{
+        font-size: $small;
+    }
+    .historia{
+        .resumen-homenajes{
+            padding-top: 1rem;
+            padding-bottom: 1.5rem;
+            font-size: $small;
+            line-height: 1rem;
+            & h3{
+                font-size: $small;
+            }
+        }
+        .accordion{
+            & .accordion-button{
+                font-size: $small; 
+            }
+            & .accordion-body {
+                font-size: $small; 
+            }
+        }
+    }           
 }

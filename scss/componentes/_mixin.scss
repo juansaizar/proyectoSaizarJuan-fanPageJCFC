@@ -47,3 +47,15 @@
   transform: $transformacion;
   transition: $transicion;
 }
+
+/*Bordes para separar elementos
+$color= color del borde
+$tipo= tipo de borde
+$grosor= grosor del borde
+$separacion= espacio entre elemmentos y borde*/
+@mixin estiloBordes($color, $tipo, $grosor, $separacion){
+  border-bottom: $color;
+  border-bottom-style: $tipo;
+  border-bottom-width: $grosor;
+  padding-bottom: $separacion;
+}

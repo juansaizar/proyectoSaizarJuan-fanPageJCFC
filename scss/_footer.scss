@@ -10,7 +10,7 @@ footer{
         padding-right: 5%;
     }
     & a{
-        @include estiloIconos($ndl, 1.2rem);
+        @include estiloIconos($ndl, $large);
         &:hover{
             @include hovers($dark, scale(1.1), all 1s)
         }
@@ -32,7 +32,7 @@ footer{
     & .thanks{
         text-align: center;
         & h3{
-            @include estiloTexto($dark, 1.2rem, center)
+            @include estiloTexto($dark, $large, center)
         }      
     }
     & .contact{
@@ -55,42 +55,30 @@ footer{
 }
 
 /*MEDIAS QUERIES*/
-/*Responsive mobile vertical y horizontal*/
-@media screen and (max-width: 480px) {
+/*Responsive tablet*/
+@media screen and (min-width: 769px) and (max-width: 1024px){
     footer{
-        width: 100%;
-        @include contenedores(flex, column, space-around, center);
-        & div{
-            padding-bottom: .5rem;
-        }  
-        & p{
-            @include estiloTexto($dark, .7rem, center)
-        }  
         & a{
-            @include estiloIconos($ndl, 1rem);
+            @include estiloIconos($ndl, $medium);
         }
+        & p{
+            @include estiloTexto($dark, $small, center)
+        }  
         & .logoUpper{
-            width: 100%;
-            border-right-style: none; 
             & img{
-                width: 2.5rem;
+                width: 3rem;
             }
         }
         & .thanks{
-            padding-top: 1rem;
-            width: 100%;
             & h3{
-                @include estiloTexto($dark, .7rem, center)
-            } 
-            & i{
-                font-size: .7rem;
+                @include estiloTexto($dark, $medium, center)
             }      
+            & i{
+                font-size: $small;
+            } 
         }
         & .contact{
-            padding-top: 1rem;
-            width: 70%;
-            border-left-style: none;
-            padding-bottom: 0;
+            width: 35%;
         }
     }
 }
@@ -103,10 +91,10 @@ footer{
             padding-bottom: .5rem;
         }  
         & p{
-            @include estiloTexto($dark, 1rem, center)
+            @include estiloTexto($dark, $medium, center)
         }  
         & a{
-            @include estiloIconos($ndl, 1rem);
+            @include estiloIconos($ndl, $medium);
         }
         & .logoUpper{ 
             width: 100%;
@@ -119,10 +107,10 @@ footer{
             padding-top: 1rem;
             width: 100%;
             & h3{
-                @include estiloTexto($dark, 1rem, center)
+                @include estiloTexto($dark, $medium, center)
             } 
             & i{
-                font-size: 1rem;
+                font-size: $medium;
             }      
         }
         & .contact{
@@ -132,37 +120,49 @@ footer{
             padding-bottom: 0;
             & .eMail{
                 & p{
-                    font-size: 1rem;
+                    font-size: $medium;
                 }
             }
         }
     }
 }
 
-/*Responsive tablet*/
-@media screen and (min-width: 769px) and (max-width: 1024px){
+/*Responsive mobile vertical y horizontal*/
+@media screen and (max-width: 480px) {
     footer{
-        & a{
-            @include estiloIconos($ndl, 1rem);
-        }
-        & p{
-            @include estiloTexto($dark, .8rem, center)
+        width: 100%;
+        @include contenedores(flex, column, space-around, center);
+        & div{
+            padding-bottom: .5rem;
         }  
+        & p{
+            @include estiloTexto($dark, $small, center)
+        }  
+        & a{
+            @include estiloIconos($ndl, $medium);
+        }
         & .logoUpper{
+            width: 100%;
+            border-right-style: none; 
             & img{
-                width: 3rem;
+                width: 2.5rem;
             }
         }
         & .thanks{
+            padding-top: 1rem;
+            width: 100%;
             & h3{
-                @include estiloTexto($dark, 1rem, center)
-            }      
-            & i{
-                font-size: .8rem;
+                @include estiloTexto($dark, $small, center)
             } 
+            & i{
+                font-size: $small;
+            }      
         }
         & .contact{
-            width: 35%;
+            padding-top: $medium;
+            width: 70%;
+            border-left-style: none;
+            padding-bottom: 0;
         }
     }
 }

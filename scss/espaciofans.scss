@@ -1,30 +1,82 @@
+/*Desktop*/
+.portadaFans{
+    width: 100%;
+    @include estiloBordes($ndl, solid, thin, 0rem);
+    & img{
+        width: 100%;
+    }
+}
+.legado{
+    width: 100%;
+    @include contenedores(flex, column, space-around, left);
+    gap: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+    @include estiloTexto($light, $medium, left);
+    line-height: 2rem;
+    & h2{
+        @include estiloBordes($ndl, solid, thin, 1rem);
+        margin-bottom: 0;
+        @include estiloTexto($light, $large, left);
+        font-weight: lighter;
+    }
+    & p{
+        margin-bottom: 0;
+    }
+    & img{
+        width: 100%;
+        border-radius: 0.25rem;
+    }
+}
+.videos{
+    @include estiloTexto($light, $medium, left);
+    & h3{
+        @include estiloTexto($light, $large, left);
+        font-weight: lighter;
+        @include estiloBordes($ndl, solid, thin, 1rem);
+    }
+}
+.video{
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%;
+    & iframe{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+        height: 80%;
+        border: 0;
+    }
+}
 .grillafans{
     width: 100%;
     padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-bottom: 3rem;
     display: grid;
     row-gap: 1.5rem;
     grid-template-columns: repeat(6, 15%);
-    grid-template-rows: 10vh 85vh 10vh 30vh;
+    grid-template-rows: auto;
     grid-template-areas:
     "t1 t1 t1 t1 t1 t1"
     "w1 w2 w3 w4 w5 w6"
     "t2 t2 t2 t2 t2 t2"
-    ". l1 l2 l3 l4 .";
+    "l0 l1 l2 l3 l4 l5";
     justify-content: space-evenly;
     & .titulo{
         width: 100%;
-        @include contenedores(flex, column, space-evenly, center);
+        @include contenedores(flex, column, space-evenly, flex-start);
         align-content: space-around;
-        @include estiloTexto($light, 2rem, center);
+        @include estiloTexto($light, $large, center);
+        font-weight: lighter;
+        @include estiloBordes($ndl, solid, thin, 1rem);
     }
-    & h2{
+    & .wallpaper{
         grid-area: t1;
-        @extend .titulo;
     }
-    & h3{
+    & .sitios{
         grid-area: t2;
-        @extend .titulo;
     }
     & .card{
         border: none;
@@ -32,13 +84,17 @@
             border-bottom-left-radius: 0.25rem;
             border-bottom-right-radius: 0.25rem;
             background-color: $light;
+            & h5{
+                @include estiloTexto($dark, $medium, left);
+            }
             & .btn{
-                @include estiloBotones($dark, large, $ndl);
+                @include estiloBotones($dark, $small, $ndl);
                 &:focus {
-                box-shadow: none;
+                    box-shadow: none;
                 }       
                 &:hover{
-                color: $light;
+                    @include hovers($light, scale(1.02), all 1s);
+                    background-color: $ndl;
                 }
             }
         }
@@ -74,22 +130,138 @@
         grid-area: l4;
     }
     & .enlaces{
+        width: 100%;
         transition: all 1s;
-        @include contenedores(flex, column, space-around, center);
+        & a{
+            @include contenedores(flex, column, space-around, center);
+            & img{
+                width: 5vw;
+            }
+
+        }
     }
     & .enlaces:hover{
         transform: scale(1.05, 1.05);
     }
 }
 
-/*responsive mobile 320px vertical 480px horizontal*/
+/*MEDIAS QUERIES*/
+/*Responsive tablet*/
+@media screen and (min-width: 768px) and (max-width: 1024px){
+    .legado{
+        font-size: $medium;
+        line-height: 1.5rem;
+        & h2{
+            font-size: $medium;
+        }
+    }
+    .videos{
+        font-size: $medium;
+        line-height: 1.5rem;
+        & h3{
+            font-size: $medium;
+        }
+    }
+    .grillafans{
+        gap: 1.5rem;
+        grid-template-columns: repeat(3, 32%);
+        grid-template-rows: auto;
+        grid-template-areas:
+        "t1 t1 t1" 
+        "w1 w2 w3"
+        "w4 w5 w6" 
+        "t2 t2 t2"
+        "l1 l2 l3"
+        "l0 l4 l5";
+        & .titulo{
+            font-size: $medium;
+        }
+        & .card{
+            & .card-body{
+                .btn{
+                    font-size: $medium;
+                }
+            }
+        }
+        & .enlaces{
+            & a{
+                & img{
+                    width: 10vw;
+                }
+            }
+        }
+    } 
+}
+
+/*Responsive tablet pequeña*/
+@media screen and (min-width: 481px) and (max-width: 767px){
+    .legado{
+        font-size: $medium;
+        line-height: 1.5rem;
+        & h2{
+            font-size: $medium;
+        }
+    }
+    .videos{
+        font-size: $medium;
+        line-height: 1.5rem;
+        & h3{
+            font-size: $medium;
+        }
+    }
+    .grillafans{
+        gap: 1rem;
+        grid-template-columns: repeat(3, 32%);
+        grid-template-rows: auto;
+        grid-template-areas:
+        "t1 t1 t1" 
+        "w1 w2 w3"
+        "w4 w5 w6" 
+        "t2 t2 t2"
+        "l1 l2 l3"
+        "l0 l4 l5";
+        & .titulo{
+            font-size: $medium;
+        }
+        & .card{
+            & .card-body{
+                .btn{
+                    font-size: $medium;
+                }
+            }
+        }
+        & .enlaces{
+            & a{
+                & img{
+                    width: 10vw;
+                }
+            }
+        }
+    } 
+}
+
+/*Responsive mobile vertical y horizontal*/
 @media screen and (max-width: 480px) {
+    .legado{
+        font-size: $small;
+        line-height: 1.5rem;
+        & h2{
+            font-size: $small;
+        }
+        }
+    .videos{
+        font-size: $small;
+        line-height: 1.5rem;
+        & h3{
+            font-size: $small;
+        }
+    }
     .grillafans{
         width: 100%;
         display: grid;
-        row-gap: 1rem;
+        gap: 1rem;
         grid-template-columns: repeat(2, 47%);
-        grid-template-rows: 20vh 142vw 142vw 142vw 20vh 50vw 50vw;
+        grid-template-rows: auto;
         grid-template-areas:
         "t1 t1" 
         "w1 w2"
@@ -97,14 +269,22 @@
         "w5 w6"
         "t2 t2"
         "l1 l2"
-        "l3 l4";
+        "l3 l4"
+        "l0 l5";
         & .titulo{
-            font-size: x-large;
+            font-size: $small;
         }
         & .card{
             & .card-body{
                 .btn{
-                    font-size: medium;
+                    font-size: $small;
+                }
+            }
+        }
+        & .enlaces{
+            & a{
+                & img{
+                    width: 15vw;
                 }
             }
         }
